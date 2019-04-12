@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ECS-UI</title>
+    <link rel='stylesheet' href='https://unpkg.com/bulma@0.7.4/css/bulma.min.css'>
+</head>
+
+<body>
+    <section class="hero is-info">
+        <div class="hero-body">
+            <div class="container">
+                <div class="title is-1">Untitled</div>
+            </div>
+        </div>
+    </section>
+    <div class="box cta">
+        <div class="columns is-mobile is-centered">
+            <div class="field is-grouped">
+                <p class="control">
+                    <a class="button is-light" id="import_button">Import</a>
+                </p>
+                <p class="control">
+                    <a class="button is-light" id="export_button">Export</a>
+                </p>
+                <input class="input" type="text" placeholder="Filepath..." id="filepath_input">
+            </div>
+
+        </div>
+    </div>
+    <section class="container">
+        <div class="level-item">
+            <div class="columns is-multiline is-centered cards-container" id="sectioncontainer">
+                <div class="column is-narrow">
+                    <article class="message is-info">
+                        <div class="message-header">
+                            <p>Entities</p>
+                            <a class="button is-small is-info is-outlined is-inverted" id="new_entity_button">New</a>
+                        </div>
+                        <div class="message-body" id="entity_list"></div>
+                    </article>
+                </div>
+                <div class="column is-narrow">
+                    <article class="message is-primary">
+                        <div class="message-header">
+                            <p>Components</p>
+                            <a class="button is-small is-info is-outlined is-inverted" id="new_component_button">New</a>
+                        </div>
+                        <div class="message-body" id="component_list"></div>
+                    </article>
+                </div>
+                <div class="column is-narrow">
+                    <article class="message is-dark">
+                        <div class="message-header">
+                            <p>Data</p>
+                            <a class="button is-small is-dark" id="new_component_button"></a>
+                        </div>
+                        <div class="message-body" id="data_list">
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="loader_script.js"></script>
+    <script src="data_script.js"></script>
+    <script src="ui_script.js"></script>
+
+
+    <!--Templates-->
+    <div style="display: none;">
+
+        <div class="field is-grouped" data-type="entity_template">
+            <p class="control">
+                <div class="button is-info is-outlined" data-type="id"></div>
+                <input style="margin-left: 10px;" class="input" type="text" placeholder="Optional Name">
+            </p>
+        </div>
+
+        <div class="field is-grouped" data-type="component_template">
+            <p class="control">
+                <div class="button is-warning" data-type="valid"></div>
+                <input style="margin-left: 10px;" class="input" type="text" placeholder="Enter Name...">
+            </p>
+        </div>
+
+        <div class="field is-grouped" data-type="data_template">
+            <p class="control">
+                <div class="button is-dark" data-type="name"></div>
+                <input style="margin-left: 10px;" class="input" type="text" placeholder="">
+            </p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
